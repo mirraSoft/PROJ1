@@ -1,0 +1,63 @@
+
+@-webkit-keyframes scroll {
+  from {
+    left: 10px;
+  }
+  50% {
+    left: -320px;
+  }
+  to {
+    left: -640px;
+  }
+}
+@keyframes jump {
+ 0%   {
+  transform: translate3d(0,0,0) ;
+}
+ 40%  {
+  transform: translate3d(0,300%,0) ;
+}
+
+}
+.jump {
+  transform-origin: 0% 50%;
+  animation: jump .9s linear alternate infinite;
+}
+
+div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat-x;
+}
+
+div#back {
+  margin-top: 70px;
+  height: 200px;
+  -webkit-animation: scroll 10s infinite linear;
+  background-image: url("http://codd.cs.gsu.edu/~mmlilingwa1/fly_birds.gif");
+  background-color: #6096FF;
+}
+
+
+.front {
+  margin-top: 260px;
+  -webkit-animation: scroll 2s infinite linear;
+  background-image: url("http://codd.cs.gsu.edu/~mmlilingwa1/background1.jpg");
+}
+
+.jump {
+  -webkit-animation:jump 2s infinite linear;
+}
+
+body {
+  background: #CD853F;
+}
+.jump{
+  position: fixed;
+  top: 44%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
